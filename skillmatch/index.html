@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SkillMatch - Platform pencarian kerja berbasis skill, pengalaman, dan portfolio untuk freelancer dan creative professional. Temukan pekerjaan yang benar-benar sesuai dengan kemampuanmu.">
+  <title>SkillMatch - Temukan Pekerjaan yang Sesuai dengan Skill-mu</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- ==============================================
+       1. NAVBAR
+       ============================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="#hero" class="brand-logo" aria-label="SkillMatch Home">
+        <span class="logo-icon-wrapper">
+          <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+        </span>
+        <span class="brand-name">Skill<span class="brand-highlight">Match</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Beranda</a></li>
+          <li><a href="#features" class="nav-link">Fitur</a></li>
+          <li><a href="#how-it-works" class="nav-link">Cara Kerja</a></li>
+          <li><a href="#jobs" class="nav-link">Lowongan</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop CTA Action -->
+      <div class="header-action">
+        <button type="button" class="btn btn-primary btn-sm open-modal-btn" data-modal="signup-modal" id="nav-cta-btn">
+          Mulai Sekarang
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" id="hamburger-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Nav -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav class="mobile-nav" aria-label="Navigasi Mobile">
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-nav-link">Beranda</a></li>
+          <li><a href="#features" class="mobile-nav-link">Fitur</a></li>
+          <li><a href="#how-it-works" class="mobile-nav-link">Cara Kerja</a></li>
+          <li><a href="#jobs" class="mobile-nav-link">Lowongan</a></li>
+        </ul>
+        <div class="mobile-cta-wrap">
+          <button type="button" class="btn btn-primary btn-full open-modal-btn" data-modal="signup-modal">
+            Mulai Sekarang
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==============================================
+         2. HERO SECTION
+         ============================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Hero Left Column -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Smart Career Matching</span>
+          </div>
+
+          <h1 class="hero-title">
+            Temukan Pekerjaan yang Sesuai dengan <span class="text-accent">Skill-mu.</span>
+          </h1>
+
+          <p class="hero-description">
+            SkillMatch membantu kamu menemukan peluang kerja yang relevan berdasarkan skill, pengalaman, dan portfolio.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#jobs" class="btn btn-primary btn-lg" id="hero-find-job-btn">
+              <span>Cari Pekerjaan</span>
+              <i data-lucide="arrow-right" class="icon-sm"></i>
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg" id="hero-how-it-works-btn">
+              <span>Lihat Cara Kerja</span>
+            </a>
+          </div>
+
+          <!-- Subtle Trust Factor -->
+          <div class="hero-trust">
+            <div class="trust-avatars">
+              <span class="avatar-pill av-1" title="Lukman (Photographer/Creator)">LK</span>
+              <span class="avatar-pill av-2" title="Sarah (UI/UX Designer)">SR</span>
+              <span class="avatar-pill av-3" title="Dimas (Motion Designer)">DM</span>
+            </div>
+            <div class="trust-text">
+              <strong>94% akurasi kecocokan</strong> untuk freelancer & creative professional
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: SaaS Dashboard Mockup -->
+        <div class="hero-mockup-wrapper">
+          <div class="mockup-card">
+            <!-- Mockup Header -->
+            <div class="mockup-header">
+              <div class="mockup-header-title">
+                <span class="mockup-sparkle-icon">
+                  <i data-lucide="sparkles" class="icon-xs"></i>
+                </span>
+                <span class="mockup-title-text">Recommended For You</span>
+              </div>
+              <span class="mockup-badge">Live Match</span>
+            </div>
+
+            <!-- Mockup Mini Filter Tabs -->
+            <div class="mockup-filter-row">
+              <span class="mockup-tab active">Semua</span>
+              <span class="mockup-tab">Desain</span>
+              <span class="mockup-tab">Konten</span>
+            </div>
+
+            <!-- Mockup Job Card 1 -->
+            <div class="mockup-job-card featured">
+              <div class="mockup-job-top">
+                <div class="company-brand">
+                  <div class="company-logo-avatar bg-indigo">CS</div>
+                  <div>
+                    <h2 class="mockup-job-role">UI/UX Designer</h2>
+                    <p class="mockup-company-name">Creative Studio</p>
+                  </div>
+                </div>
+                <div class="match-score-pill score-high">
+                  <i data-lucide="check-circle-2" class="icon-xs"></i>
+                  <span>92% Match</span>
+                </div>
+              </div>
+
+              <div class="mockup-tags">
+                <span class="tag">Figma</span>
+                <span class="tag">UI Design</span>
+                <span class="tag">UX Research</span>
+              </div>
+
+              <div class="mockup-job-footer">
+                <span class="meta-item"><i data-lucide="map-pin" class="icon-xs"></i> Remote</span>
+                <span class="meta-item"><i data-lucide="wallet" class="icon-xs"></i> Rp 6–8 jt</span>
+              </div>
+            </div>
+
+            <!-- Mockup Job Card 2 -->
+            <div class="mockup-job-card">
+              <div class="mockup-job-top">
+                <div class="company-brand">
+                  <div class="company-logo-avatar bg-blue">PC</div>
+                  <div>
+                    <h2 class="mockup-job-role">Visual Designer</h2>
+                    <p class="mockup-company-name">Pixel Creative</p>
+                  </div>
+                </div>
+                <div class="match-score-pill score-medium">
+                  <i data-lucide="check-circle-2" class="icon-xs"></i>
+                  <span>87% Match</span>
+                </div>
+              </div>
+
+              <div class="mockup-tags">
+                <span class="tag">Branding</span>
+                <span class="tag">Illustrator</span>
+                <span class="tag">Visual Design</span>
+              </div>
+
+              <div class="mockup-job-footer">
+                <span class="meta-item"><i data-lucide="briefcase" class="icon-xs"></i> Hybrid</span>
+                <span class="meta-item"><i data-lucide="wallet" class="icon-xs"></i> Rp 5–7 jt</span>
+              </div>
+            </div>
+
+            <!-- Floating verification tag -->
+            <div class="floating-stat-badge">
+              <div class="stat-icon">
+                <i data-lucide="shield-check" class="icon-sm"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-label">Portfolio Verified</span>
+                <span class="stat-val">3 Karya Terhubung</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         3. PROBLEM / VALUE SECTION
+         ============================================== -->
+    <section class="problem-section" id="problem">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Tantangan Karir Kreatif</span>
+          <h2 class="section-title">Mencari pekerjaan yang tepat tidak harus sulit.</h2>
+          <p class="section-subtitle">
+            Banyak pencari kerja menghabiskan waktu memilah lowongan yang belum tentu sesuai dengan kemampuan mereka.
+          </p>
+        </div>
+
+        <div class="problem-grid">
+          <!-- Card 1 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrap">
+              <i data-lucide="file-question" class="feature-icon"></i>
+            </div>
+            <h3 class="problem-card-title">Terlalu Banyak Requirement</h3>
+            <p class="problem-card-desc">
+              Sulit menentukan lowongan mana yang benar-benar sesuai dengan skill yang kamu miliki.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrap">
+              <i data-lucide="scale" class="feature-icon"></i>
+            </div>
+            <h3 class="problem-card-title">Sulit Menilai Kecocokan</h3>
+            <p class="problem-card-desc">
+              Tidak selalu mudah mengetahui apakah pengalaman dan portfolio kamu cocok dengan sebuah posisi.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrap">
+              <i data-lucide="compass" class="feature-icon"></i>
+            </div>
+            <h3 class="problem-card-title">Rekomendasi Kurang Relevan</h3>
+            <p class="problem-card-desc">
+              Temukan pekerjaan yang lebih sesuai dengan kemampuan dan tujuan kariermu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         4. FEATURES SECTION
+         ============================================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Solusi Terpadu</span>
+          <h2 class="section-title">Semua yang kamu butuhkan untuk menemukan pekerjaan yang tepat.</h2>
+          <p class="section-subtitle">
+            SkillMatch membantu menyederhanakan proses pencarian kerja dari awal hingga menemukan peluang yang sesuai.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1: Skill Match -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-icon-box">
+                <i data-lucide="crosshair" class="feature-icon"></i>
+              </div>
+              <span class="feature-chip">Intelligent Engine</span>
+            </div>
+            <h3 class="feature-card-title">Skill Match</h3>
+            <p class="feature-card-desc">
+              Temukan pekerjaan berdasarkan skill yang kamu miliki.
+            </p>
+            <div class="feature-meta-preview">
+              <span class="micro-tag match-tag"><i data-lucide="check" class="icon-micro"></i> Figma 100%</span>
+              <span class="micro-tag match-tag"><i data-lucide="check" class="icon-micro"></i> Photography 95%</span>
+            </div>
+          </div>
+
+          <!-- Feature 2: Job Recommendation -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-icon-box">
+                <i data-lucide="star" class="feature-icon"></i>
+              </div>
+              <span class="feature-chip">Personalisasi</span>
+            </div>
+            <h3 class="feature-card-title">Job Recommendation</h3>
+            <p class="feature-card-desc">
+              Dapatkan rekomendasi lowongan yang relevan dengan profilmu.
+            </p>
+            <div class="feature-meta-preview">
+              <span class="micro-tag info-tag"><i data-lucide="bell" class="icon-micro"></i> Notifikasi Lowongan
+                Relevan</span>
+            </div>
+          </div>
+
+          <!-- Feature 3: Portfolio Match -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-icon-box">
+                <i data-lucide="folder" class="feature-icon"></i>
+              </div>
+              <span class="feature-chip">Karya Nyata</span>
+            </div>
+            <h3 class="feature-card-title">Portfolio Match</h3>
+            <p class="feature-card-desc">
+              Ketahui seberapa sesuai portfolio kamu dengan posisi yang dituju.
+            </p>
+            <div class="feature-meta-preview">
+              <span class="micro-tag success-tag"><i data-lucide="image" class="icon-micro"></i> Penilaian Relevansi
+                Proyek</span>
+            </div>
+          </div>
+
+          <!-- Feature 4: Smart Search -->
+          <div class="feature-card">
+            <div class="feature-header">
+              <div class="feature-icon-box">
+                <i data-lucide="search" class="feature-icon"></i>
+              </div>
+              <span class="feature-chip">Pencarian Cepat</span>
+            </div>
+            <h3 class="feature-card-title">Smart Search</h3>
+            <p class="feature-card-desc">
+              Cari lowongan berdasarkan role, skill, pengalaman, dan preferensi.
+            </p>
+            <div class="feature-meta-preview">
+              <span class="micro-tag filter-tag"><i data-lucide="sliders-horizontal" class="icon-micro"></i>
+                Multi-filter Fleksibel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         5. HOW IT WORKS SECTION
+         ============================================== -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Alur Sederhana</span>
+          <h2 class="section-title">Mulai menemukan peluang dalam 3 langkah.</h2>
+          <p class="section-subtitle">
+            Hanya butuh beberapa menit untuk menyinkronkan keahlianmu dengan peluang kerja terbaik.
+          </p>
+        </div>
+
+        <div class="steps-wrapper">
+          <div class="step-connector-line" aria-hidden="true"></div>
+
+          <div class="steps-grid">
+            <!-- Step 1 -->
+            <div class="step-card">
+              <div class="step-badge-number">01</div>
+              <div class="step-icon-circle">
+                <i data-lucide="user-check" class="step-icon"></i>
+              </div>
+              <h3 class="step-title">Lengkapi Profil</h3>
+              <p class="step-desc">
+                Tambahkan informasi tentang pengalaman dan bidang yang kamu minati.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+              <div class="step-badge-number">02</div>
+              <div class="step-icon-circle">
+                <i data-lucide="layers" class="step-icon"></i>
+              </div>
+              <h3 class="step-title">Tambahkan Skill & Portfolio</h3>
+              <p class="step-desc">
+                Masukkan skill yang kamu kuasai dan tampilkan karya terbaikmu.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+              <div class="step-badge-number">03</div>
+              <div class="step-icon-circle">
+                <i data-lucide="zap" class="step-icon"></i>
+              </div>
+              <h3 class="step-title">Temukan Job Match</h3>
+              <p class="step-desc">
+                Dapatkan rekomendasi pekerjaan yang paling relevan dengan profilmu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         6. RECOMMENDED JOBS SECTION
+         ============================================== -->
+    <section class="recommended-jobs-section" id="jobs">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Rekomendasi Terkurasi</span>
+          <h2 class="section-title">Peluang yang Mungkin Cocok Untukmu</h2>
+          <p class="section-subtitle">
+            Rekomendasi pekerjaan berdasarkan skill dan minatmu.
+          </p>
+        </div>
+
+        <div class="jobs-grid">
+          <!-- Job Card 1 -->
+          <article class="job-card" data-job="uiux">
+            <div class="job-card-header">
+              <div class="company-avatar-box avatar-cs">CS</div>
+              <div class="company-details">
+                <h3 class="job-title">UI/UX Designer</h3>
+                <span class="company-name">Creative Studio</span>
+              </div>
+            </div>
+
+            <!-- Visual Highlight: Match Score -->
+            <div class="job-match-badge-wrap">
+              <div class="match-score-pill score-highlight">
+                <i data-lucide="sparkles" class="icon-xs"></i>
+                <span class="score-text">92% Match</span>
+              </div>
+              <span class="match-clarification">Tinggi kecocokannya dengan profilmu</span>
+            </div>
+
+            <!-- Tags -->
+            <div class="job-tags-list">
+              <span class="tag">Figma</span>
+              <span class="tag">UI Design</span>
+              <span class="tag">UX Research</span>
+            </div>
+
+            <!-- Info Bar -->
+            <div class="job-info-row">
+              <div class="info-pill">
+                <i data-lucide="globe" class="icon-xs"></i>
+                <span>Remote</span>
+              </div>
+              <div class="info-pill">
+                <i data-lucide="badge-dollar-sign" class="icon-xs"></i>
+                <span class="salary-text">Rp 6–8 jt</span>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="job-card-action">
+              <button type="button" class="btn btn-outline-primary btn-full view-job-btn" data-title="UI/UX Designer"
+                data-company="Creative Studio" data-match="92% Match" data-salary="Rp 6–8 jt" data-type="Remote"
+                data-tags="Figma, UI Design, UX Research" data-skills="Figma (100%), UI Design (95%), UX Research (85%)"
+                data-desc="Creative Studio mencari UI/UX Designer yang berfokus pada desain antarmuka aplikasi web dan riset user journey yang intuitif. Sangat cocok bagi desainer dengan portfolio studi kasus terstruktur.">
+                Lihat Lowongan
+              </button>
+            </div>
+          </article>
+
+          <!-- Job Card 2 -->
+          <article class="job-card" data-job="visual">
+            <div class="job-card-header">
+              <div class="company-avatar-box avatar-pc">PC</div>
+              <div class="company-details">
+                <h3 class="job-title">Visual Designer</h3>
+                <span class="company-name">Pixel Creative</span>
+              </div>
+            </div>
+
+            <!-- Visual Highlight: Match Score -->
+            <div class="job-match-badge-wrap">
+              <div class="match-score-pill score-highlight">
+                <i data-lucide="sparkles" class="icon-xs"></i>
+                <span class="score-text">87% Match</span>
+              </div>
+              <span class="match-clarification">Cocok dengan keahlian visualmu</span>
+            </div>
+
+            <!-- Tags -->
+            <div class="job-tags-list">
+              <span class="tag">Branding</span>
+              <span class="tag">Illustrator</span>
+              <span class="tag">Visual Design</span>
+            </div>
+
+            <!-- Info Bar -->
+            <div class="job-info-row">
+              <div class="info-pill">
+                <i data-lucide="building-2" class="icon-xs"></i>
+                <span>Hybrid</span>
+              </div>
+              <div class="info-pill">
+                <i data-lucide="badge-dollar-sign" class="icon-xs"></i>
+                <span class="salary-text">Rp 5–7 jt</span>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="job-card-action">
+              <button type="button" class="btn btn-outline-primary btn-full view-job-btn" data-title="Visual Designer"
+                data-company="Pixel Creative" data-match="87% Match" data-salary="Rp 5–7 jt" data-type="Hybrid"
+                data-tags="Branding, Illustrator, Visual Design"
+                data-skills="Brand Identity (90%), Illustrator (90%), Visual Design (85%)"
+                data-desc="Pixel Creative membutuhkan Visual Designer untuk menangani kampanye identitas visual merek klien digital, pembuatan aset marketing, serta ilustrasi vektor modern.">
+                Lihat Lowongan
+              </button>
+            </div>
+          </article>
+
+          <!-- Job Card 3 -->
+          <article class="job-card" data-job="content">
+            <div class="job-card-header">
+              <div class="company-avatar-box avatar-mw">MW</div>
+              <div class="company-details">
+                <h3 class="job-title">Content Creator</h3>
+                <span class="company-name">MediaWorks</span>
+              </div>
+            </div>
+
+            <!-- Visual Highlight: Match Score -->
+            <div class="job-match-badge-wrap">
+              <div class="match-score-pill score-highlight">
+                <i data-lucide="sparkles" class="icon-xs"></i>
+                <span class="score-text">84% Match</span>
+              </div>
+              <span class="match-clarification">Sesuai portfolio visual & foto</span>
+            </div>
+
+            <!-- Tags -->
+            <div class="job-tags-list">
+              <span class="tag">Photography</span>
+              <span class="tag">Content</span>
+              <span class="tag">Social Media</span>
+            </div>
+
+            <!-- Info Bar -->
+            <div class="job-info-row">
+              <div class="info-pill">
+                <i data-lucide="globe" class="icon-xs"></i>
+                <span>Remote</span>
+              </div>
+              <div class="info-pill">
+                <i data-lucide="badge-dollar-sign" class="icon-xs"></i>
+                <span class="salary-text">Rp 5–7 jt</span>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="job-card-action">
+              <button type="button" class="btn btn-outline-primary btn-full view-job-btn" data-title="Content Creator"
+                data-company="MediaWorks" data-match="84% Match" data-salary="Rp 5–7 jt" data-type="Remote"
+                data-tags="Photography, Content, Social Media"
+                data-skills="Photography (95%), Short-form Video (80%), Social Strategy (80%)"
+                data-desc="MediaWorks mencari Content Creator yang memiliki mata fotografi kuat dan kemampuan menyusun storytelling visual untuk platform digital modern. Peluang luar biasa untuk talenta visual yang ingin berkembang.">
+                Lihat Lowongan
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         7. CTA SECTION
+         ============================================== -->
+    <section class="cta-section" id="cta">
+      <div class="cta-decorative-glow" aria-hidden="true"></div>
+      <div class="container cta-container">
+        <div class="cta-inner">
+          <h2 class="cta-title">Siap menemukan pekerjaan yang lebih cocok?</h2>
+          <p class="cta-subtitle">
+            Mulai perjalanan kariermu dan temukan peluang yang sesuai dengan skill-mu.
+          </p>
+          <div class="cta-button-wrap">
+            <button type="button" class="btn btn-white-primary btn-xl open-modal-btn" data-modal="signup-modal"
+              id="cta-start-btn">
+              Mulai Sekarang
+            </button>
+          </div>
+          <p class="cta-note">
+            <i data-lucide="shield" class="icon-xs"></i> Gratis untuk pencari kerja &bull; Tanpa biaya pendaftaran
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================
+       8. FOOTER
+       ============================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-logo footer-logo">
+            <span class="logo-icon-wrapper">
+              <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </span>
+            <span class="brand-name">Skill<span class="brand-highlight">Match</span></span>
+          </a>
+          <p class="footer-desc">
+            Temukan peluang kerja yang sesuai dengan skill dan portfolio-mu.
+          </p>
+        </div>
+
+        <!-- Links: Product -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Product</h3>
+          <ul class="footer-link-list">
+            <li><a href="#features">Fitur</a></li>
+            <li><a href="#how-it-works">Cara Kerja</a></li>
+            <li><a href="#jobs">Lowongan</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Company -->
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Company</h3>
+          <ul class="footer-link-list">
+            <li><a href="#about" class="footer-info-trigger" data-type="about">Tentang Kami</a></li>
+            <li><a href="#contact" class="footer-info-trigger" data-type="contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="copyright-text">&copy; 2026 SkillMatch. Project Kelompok 14.</p>
+        <p class="academic-badge-text">UI/UX & Web Development Project</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       INTERACTIVE MODALS
+       ============================================== -->
+  <!-- Job Detail Modal -->
+  <div class="modal-backdrop" id="job-modal" aria-hidden="true" role="dialog" aria-labelledby="job-modal-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-badge-group">
+          <span class="match-score-pill score-highlight" id="modal-match-score">92% Match</span>
+          <span class="info-pill" id="modal-work-type">Remote</span>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Tutup jendela modal">
+          <i data-lucide="x" class="icon-sm"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h3 class="modal-job-title" id="modal-job-title">UI/UX Designer</h3>
+        <p class="modal-company-name" id="modal-company-name">Creative Studio</p>
+        <p class="modal-salary" id="modal-salary">Estimasi Gaji: <strong>Rp 6–8 jt</strong></p>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">Deskripsi Posisi</h4>
+          <p class="modal-desc-text" id="modal-desc">Deskripsi lowongan...</p>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">Kecocokan Skill Anda</h4>
+          <div class="modal-skills-breakdown" id="modal-skills-breakdown">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">Tag Kategori</h4>
+          <div class="modal-tags-wrap" id="modal-tags">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-modal-action">Tutup</button>
+        <button type="button" class="btn btn-primary" id="modal-apply-btn">Lamar Posisi Ini</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up / Start Interactive Modal -->
+  <div class="modal-backdrop" id="signup-modal" aria-hidden="true" role="dialog" aria-labelledby="signup-modal-title">
+    <div class="modal-window modal-narrow">
+      <div class="modal-header">
+        <div class="brand-logo modal-logo">
+          <span class="logo-icon-wrapper">
+            <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </span>
+          <span class="brand-name">Skill<span class="brand-highlight">Match</span></span>
+        </div>
+        <button type="button" class="modal-close-btn" id="signup-close-btn" aria-label="Tutup jendela">
+          <i data-lucide="x" class="icon-sm"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h3 class="modal-job-title" id="signup-modal-title">Mulai Perjalanan Karirmu</h3>
+        <p class="modal-desc-text">
+          Bergabunglah dengan ribuan talenta kreatif yang telah menemukan pekerjaan sesuai skill dan portfolio mereka.
+        </p>
+
+        <form class="signup-quick-form" id="signup-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="form-name" class="form-label">Nama Lengkap</label>
+            <input type="text" id="form-name" class="form-control" placeholder="Contoh: Lukman Pratama" required>
+          </div>
+          <div class="form-group">
+            <label for="form-role" class="form-label">Bidang Keahlian Utama</label>
+            <select id="form-role" class="form-control">
+              <option value="photographer">Photographer / Visual Creator</option>
+              <option value="uiux">UI/UX Designer</option>
+              <option value="graphic">Graphic & Brand Designer</option>
+              <option value="content">Content Creator</option>
+              <option value="other">Keahlian Kreatif Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="form-email" class="form-label">Alamat Email</label>
+            <input type="email" id="form-email" class="form-control" placeholder="nama@email.com" required>
+          </div>
+
+          <div class="form-feedback" id="form-feedback" style="display: none;"></div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="submit-signup-btn">
+            Buat Profil & Temukan Match
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
